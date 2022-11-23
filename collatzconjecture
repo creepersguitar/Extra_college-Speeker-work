@@ -1,0 +1,23 @@
+# collatz conjecture code
+#
+#
+import matplotlib.pyplot as plt
+import numpy as n
+#
+#
+#
+def collatz_conjecture(number):
+    print(number)
+    if number == 1.0:
+        return True
+    elif number  % 2 == 0:
+        number = number / 2
+    else:
+        number = number * 3 +  1
+    return collatz_conjecture(number)
+#
+#
+#
+complete = False
+complete = collatz_conjecture(float(input("Enter a number now ... : ")))
+print(complete)
